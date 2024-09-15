@@ -1,0 +1,28 @@
+mysql -u root -p ocntrial < "C:\Users\Akhlaque Ahmad\Downloads\ocntrial.sql"
+
+Set the below values in php.ini file (C:\xampp\php\)
+
+max_execution_time = 0
+max_input_time=259200
+memory_limit = 1000M
+upload_max_filesize = 750M
+post_max_size = 750M
+Open config.default file(C:\xampp\phpMyAdmin\libraries\config.default) and set the value as below:
+
+$cfg['ExecTimeLimit'] = 0;
+Then open the config.inc file(C:\xampp\phpMyAdmin\config.inc). and paste below line:
+
+$cfg['UploadDir'] = 'upload';
+Go to phpMyAdmin(C:\xampp\phpMyAdmin) folder and create folder called upload and paste your database to newly created upload folder (don't need to zip)
+
+Lastly, go to phpMyAdmin and upload your db (Please select your database in drop-down)
+
+---------------------------------------------------------------------------------------
+
+mysql> create new_database/existing_database;
+mysql> use new_database;
+mysql> source (Here you need to import the path of the SQL file);
+
+E.g:- MariaDB [new_database]> SOURCE C:/Users/Akhlaque Ahmad/Downloads/ocntrial.sql;
+
+-----------------------------------------------------------------------------------------
