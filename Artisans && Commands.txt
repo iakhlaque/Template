@@ -4,6 +4,7 @@ php artisan make:model Name
 php artisan make:migration create_names_table
 
 mysql -u root -p ocntrial < "C:\Users\Akhlaque Ahmad\Downloads\ocntrial.sql"
+E.g:- MariaDB [new_database]> SOURCE C:/Users/Akhlaque Ahmad/Downloads/ocntrial.sql;
 
 composer global require laravel/installer
 laravel new example-app

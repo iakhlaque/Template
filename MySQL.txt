@@ -18,7 +18,7 @@ Go to phpMyAdmin(C:\xampp\phpMyAdmin) folder and create folder called upload and
 Lastly, go to phpMyAdmin and upload your db (Please select your database in drop-down)
 
 ---------------------------------------------------------------------------------------
-
+mysql>mysql -u root -p
 mysql> create new_database/existing_database;
 mysql> use new_database;
 mysql> source (Here you need to import the path of the SQL file);
