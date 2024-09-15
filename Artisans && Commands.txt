@@ -1,6 +1,13 @@
+composer create-project laravel/laravel:^10.0 example-app
+php artisan make:controller Name --resource
+php artisan make:model Name
+php artisan make:migration create_names_table
+
+composer global require laravel/installer
+laravel new example-app
+
 php artisan cache:clear
 php artisan route:clear
-php artisan route:cache
 php artisan route:cache
 php artisan config:clear
 php artisan view:clear
@@ -10,6 +17,9 @@ php artisan optimize:clear
 php artisan optimize
 php artisan key:generate
 php artisan route:list
+php artisan permission:cache-reset
+php artisan cache:forget spatie.permission.cache
+php artisan cache:clear
 php artisan migrate:refresh --seed
 
 Accept : application/json - Postman
@@ -37,3 +47,8 @@ Migrate - php artisan migrate --path=/database/migrations/fileName.php
 Roolback - php artisan migrate:rollback --path=/database/migrations/fileName.php
 Refresh - php artisan migrate:refresh --path=/database/migrations/fileName.php
 Seeder - php artisan db:seed --class=classNameTableSeeder
+
+# enable maintenance mode - php artisan down
+# disable maintenance mode - php artisan up
+# if you want the client to refresh page after a specified number of seconds - php artisan down --retry=60
+

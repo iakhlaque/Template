@@ -1,0 +1,34 @@
+Steps to Set Up Multiple XAMPP Instances:
+Download Different XAMPP Versions:
+
+Download the different versions of XAMPP you need (e.g., one with PHP 7.x for your current project and another with PHP 8.x for other projects).
+Install in Separate Folders:
+
+Install each version of XAMPP in separate directories. For example:
+C:\xampp7 (for XAMPP with PHP 7.x)
+C:\xampp8 (for XAMPP with PHP 8.x)
+Configure Different Ports (Optional but Recommended): If you want to run both XAMPP versions simultaneously, you'll need to change the default ports for Apache and MySQL in one of the XAMPP installations to avoid conflicts.
+
+Change Apache Port:
+
+Go to the XAMPP installation folder (C:\xampp7 or C:\xampp8).
+Open apache\conf\httpd.conf and change:
+Listen 80 to Listen 8080 (or any other available port).
+ServerName localhost:80 to ServerName localhost:8080.
+Save the changes.
+Change MySQL Port (Optional):
+
+Go to mysql\bin\my.ini in the XAMPP installation folder.
+Change the port setting from 3306 to 3307 (or another available port).
+Save the changes.
+Start/Stop XAMPP Instances:
+
+Use the XAMPP Control Panel for each instance (xampp-control.exe) to start and stop services. Ensure that only one version of Apache and MySQL is running at a time, unless you've configured different ports.
+Running Both XAMPP Versions:
+If you configured different ports for Apache and MySQL, you can run both XAMPP instances simultaneously.
+Access each XAMPP instance via different ports:
+For Apache on XAMPP7: http://localhost:8080 (or the port you set)
+For Apache on XAMPP8: http://localhost:80 (or the default)
+This setup allows you to use different PHP versions for different projects on the same machine.
+
+Let me know if you need more details or run into any issues!
