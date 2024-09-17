@@ -1,0 +1,10 @@
+How to fix Invalid request (Unsupported SSL request)
+
+First make sure the APP_URL in the .env file is something like this: APP_URL=http://localhost or http://127.0.0.1:8000
+Change APP_ENV=production to APP_ENV=development
+Then run php artisan serve again
+if above method doesn't work
+
+Edit the /app/Providers/AppServiceProvider.php file: URL::forceScheme('https'); to URL::forceScheme('http');
+
+and run the application again
